@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Page</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        body {
+            background-image: url(./food.avif);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            font-family: Arial, sans-serif;
+        }
+        .signup .sign-up {
+            width: 500px;
+            height: 400px;
+            position: relative;
+            top: 100px;
+            left: 350px;
+            padding: 30px;
+            background: url(../food.avif);
+        }
+        form {
+            height: 300px;
+            width: 400px;
+            background-color: black;
+            margin: 50px;
+        }
+        form:hover {
+            box-shadow: 0px 0px 10px orange;
+        }
+        .sign-up input {
+            margin: 5px;
+            height: 40px;
+            position: relative;
+            top: 30px;
+            left: 10px;
+            text-align: center;
+        }
+        .sign-up input:hover {
+            background-color: whitesmoke;
+            border-style: none;
+        }
+        .sign-up button {
+            padding: 10px 162px;
+            margin-top: 50px;
+            margin-left: 15px;
+        }
+        .sign-up .email {
+            width: 355px;
+        }
+        .sign-up button:hover {
+            background-color: blue;
+            border-style: none;
+            color: white;
+        }
+
+        @media screen and (max-width: 767px) {
+            .signup .sign-up {
+                width: 250px;
+                height: 400px;
+                padding: 30px;
+                background: url(./food.avif);
+                position: relative;
+                left: 0px;
+                top: 0px;
+            }
+            form {
+                height: 320px;
+                width: 300px;
+                background-color: black;
+                margin: 50px;
+            }
+            .sign-up .email {
+                width: 170px;
+            }
+            .sign-up button {
+                padding: 10px 70px;
+                margin-top: 60px;
+                margin-left: 55px;
+            }
+            .sign-up input {
+                margin-left: 50px;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="signup">
+        <div class="sign-up">
+            <form id="Formid">
+                <input type="text" placeholder="Enter First Name" id="firstName">
+                <input type="text" placeholder="Enter Last Name" id="lastName"> <br>
+
+                <input type="email" placeholder="example@example.com" class="email" id="email"> <br>
+                <input type="password" placeholder="Password" required id="password">
+                <input type="password" placeholder="Confirm password" required id="confirmPassword"> <br>
+                <button type="submit">SignUp</button>
+            </form>
+        </div>
+    </section>
+
+    <script>
+        document.getElementById("Formid").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            // Get form data
+            const firstName = document.getElementById("firstName").value;
+            const lastName = document.getElementById("lastName").value;
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+            const confirmPassword = document.getElementById("confirmPassword").value;
+
+            // Simple validation
+            if (!firstName || !lastName || !email || !password || !confirmPassword) {
+                alert("Please fill in all fields!");
+                return;
+            }
+
+            if (password !== confirmPassword) {
+                alert("Passwords do not match!");
+                return;
+            }
+
+            // Log the form data as an object in one go
+            console.log({
+                firstName,
+                lastName,
+                email,
+                password,
+                confirmPassword
+            });
+
+            // Optionally reset the form after successful submission
+            document.getElementById("Formid").reset();
+        });
+    </script>
+
+</body>
+</html>

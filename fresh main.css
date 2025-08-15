@@ -1,0 +1,1212 @@
+@import url('https://fonts.googleapis.com/css2?family=Cookie&family=Dancing+Script&display=swap');
+
+.cookie-regular {
+    font-family: "Cookie", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+.header{
+    height: 110vh;
+    width: 100%;
+    background: url(./biryani.jpg);
+    background-size: cover;
+    /* background-color: rgb(172, 52, 52); */
+}
+nav{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 2% 6%;
+}
+.logo h1{
+    font-size: 3rem;
+    color: goldenrod;
+}
+    .links{
+    /* margin-left: 40px; */
+    /* padding-left: 40px; */
+}
+.links ul li{
+    list-style: none;
+    font-size: 1.5rem;
+    display: inline-block;
+    margin: 10px;
+    position: relative;
+    right: -60px;
+}
+.links ul li a{
+    color: goldenrod;
+}
+.links ul li::after{
+    content: '';
+    width: 0;
+    height: 1px;
+    display: block;
+    margin: auto;
+    background: goldenrod;
+    transition: 0.5s;
+}
+.links ul li:hover::after{
+    width: 80%;
+}
+.btn{
+    padding: 6px 8px;
+    margin: 10px;
+    background-color: goldenrod;
+    border: none;
+    font-style: 0.8rem;
+    border-radius: 2px;
+    margin-left: 80px;
+}
+.btn:hover{
+    background-color: yellow;
+    box-shadow: 2px 2px 10px yellow;
+}
+nav .fa-solid{
+    display: none;
+}
+
+
+
+/* ================second div title part css */
+.main-title{
+    position: relative;
+}
+.main-title h1{
+    font-size: 5rem;
+    color: white;
+    position: absolute;
+    top: 40px;
+    left: 30px;
+}
+.main-title p{
+    position: absolute;
+    left: 0px;
+    top: 240px;
+    left: 40px;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: white;
+    font-family: "Mulish", sans-serif;
+
+}
+.btn1{
+    position: relative;
+    top: 390px;
+    left: 30px;
+    padding: 10px 50px;
+    margin: 10px;
+    background-color: goldenrod;
+    border: none;
+    font-style: 1rem;
+    border-radius: 2px;
+}
+.btn1:hover{
+    background-color: yellow;
+    box-shadow: 2px 2px 10px yellow;
+}
+.title-image img{
+    height: 350px;
+    width: 350px;
+    border-radius: 50%;
+    padding: 10px;
+    border: 2px solid white;
+    position: absolute;
+    top: 30px;
+    left: 750px;
+    animation-name: img;
+    animation-duration: 5s;
+    animation-delay: 3s;
+    animation-iteration-count: infinite;
+    cursor: pointer;
+}
+.title-image img:hover{
+    box-shadow: 2px 2px 10px goldenrod,
+                2px 2px 15px goldenrod,
+                2px 2px 20px goldenrod,
+                2px 2px 25px goldenrod;
+}
+/* animation for title image */
+@keyframes img {
+    to{
+        rotate: 90deg;
+    }
+    
+}
+
+.Images-section{
+display: flex;
+gap: 30px;
+position: relative;
+top: 340px;
+left: 300px;
+}
+
+.Images-section img{
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    border: 2px solid white;
+    padding: 5px;
+}
+
+/* =================media querys ============================================*/
+@media (max-width:767px) {
+    .logo h1{
+        font-size: 2.2rem;
+        color: goldenrod;
+        padding: 25px 40px ;
+    }
+    
+    nav .fa-solid{
+            display: block;
+            color:goldenrod;
+            font-size: 22px;
+            cursor: pointer;
+            margin: 10px;
+    }
+
+    .links{
+        position: absolute;
+        background:rgb(94, 119, 3) ;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+
+    }
+
+    .links ul li{
+        display: block;
+        margin: 30px;
+    }
+    /* main title ============== */
+    .title h1{
+        font-size: 2.5rem;
+        position: absolute;
+        top: 20px;
+    }
+    .title p{
+        font-size: 0.8rem;
+        position: absolute;
+        top: 130px;
+    }
+    .btn1{ 
+        position: absolute;
+        top: 290px;
+        font-size:0.7rem;
+    }
+    
+    .Images-section{
+        gap: 10px;
+        position: relative;
+        top: 360px;
+        left: 30px;
+        }
+        
+        .Images-section img{
+            height: 80px;
+            width: 80px;
+            border-radius: 50%;
+            padding: 3px;
+        }        
+}
+
+
+/*==================About us part css part================== */
+.about-us{
+    width: 100%;
+    display: flex;
+    margin-left: -10px;
+    margin-top: 50px;
+}
+.about{
+    position: relative;
+    width: 700px;
+    display: flex;
+    margin-top: 10px;
+}
+.about img{
+    height: 300px;
+    width: 300px;
+    margin: 10px;
+
+}
+.about img:hover{
+    box-shadow: 0px 0px 30px gold;
+    transform:scale(1.1,1.1);
+    cursor: pointer;
+
+}
+
+.about .image2 img{
+    height: 200px;
+    width: 200px;
+    margin-left: 110px;
+}
+.about .image3 img{
+    height: 200px;
+    width: 200px;
+    margin-top: 100px;
+}
+
+/*=====abouts-title============== */
+.abouts-title{
+    padding-left: 10px;
+    padding-right: 20px;
+}
+.abouts-title h4{
+    color: gold;
+    font-family: "Cookie", serif;
+    font-size: 2.2rem;
+    font-weight: 600;
+
+}
+.abouts-title h2{
+
+    font-size: 2.5rem;
+    margin-top: 10px;
+}
+.abouts-title p{
+    font-size: 1.1rem;
+    line-height: 1.8;
+    padding: 5px;
+    margin-top: 100px;
+    margin-left: -50px;
+}
+.abouts-title .fa-solid{
+    color: gold;
+}
+
+/* ==============main div css============ */
+.main{
+    display: flex;
+    gap: 30px;
+}
+.subdiv1{
+    margin-top: -80px;
+}
+.subdiv2{
+    margin-top: -80px;
+}
+
+.main b{
+    font-size: 4rem;
+    color: gold;
+    margin: 10px;
+}
+.main strong{
+    font-size: 4rem;
+    color: gold;
+    margin: 10px;
+}
+.subdiv1 span{
+    font-size: 1rem;
+    margin-bottom: 0px;
+    position: relative;
+    top: -20px;
+    left: 10px;
+    /* margin-top: 20px;
+    margin-left: 20px; */
+}
+.subdiv2 span{
+    font-size: 1rem;
+    margin-bottom: 0px;
+    position: relative;
+    top: -20px;
+    left: 10px;
+}
+  .subdiv1 h6{
+    font-size: 1.3rem;
+    margin-top: -150px;
+    position: relative;
+    left: 100px;
+
+}
+.subdiv2 h6{
+    font-size: 1.3rem;
+    margin-top: -150px;
+    position: relative;
+    left: 140px;
+}
+
+/* button css btn2 */
+.btn5 {
+    background-color: goldenrod;
+    font-size: .95rem;
+    color: white;
+    border: none;
+    padding: 10px 40px;
+    margin-top: -35px;
+}
+.btn5:hover{
+    background-color: yellow;
+    box-shadow: 0px 0px 10px yellow;
+    color: black;
+}
+.subdiv2 {
+    position: relative;
+    top: 0px;
+    left: 100px;
+}
+
+
+/* ======media query for about us page====== */
+.about-us{
+    width: 100%;
+    display: flex;
+}
+.about{
+    position: relative;
+    width: 700px;
+    display: flex;
+    margin: 10px;
+}
+.about img{
+    height: 300px;
+    width: 300px;
+    margin: 10px;
+    transition: 3s;
+
+}
+.about img:hover{
+    box-shadow: 0px 0px 30px gold;
+    transform:scale(1.1,1.1);
+    cursor: pointer;
+}
+
+.about .image2 img{
+    height: 200px;
+    width: 200px;
+    margin-left: 110px;
+}
+.about .image3 img{
+    height: 200px;
+    width: 200px;
+    margin-top: 100px;
+}
+
+
+/* ======media query for about us page====== */
+@media (max-width:767px) {
+    *{
+        margin: 0;
+        padding: 0px;
+        box-sizing: border-box;
+    }
+
+    .about-us{
+        display: block;
+        width: auto;
+        height: 900px;
+        margin-top: -10px;
+    }
+    .about{
+        position: relative;
+        background-color: gray;
+        display: block;
+    }
+   .about img{
+        height: 200px;
+        width: 200px;
+        margin-left: 40px;
+    }
+    .about img:hover{
+      transform: scale(1.1,1.1);
+    }
+    .about .image2 img{
+        margin-left: 40px;
+    }
+    .about .image3 img{
+        margin-top: 0px;
+    }
+
+    /* =====abouts-title=====media query  */
+    .about-us .abouts-title h4{
+        padding: 5px;
+        font-family: "Dancing Script", cursive;
+        font-size: 1.5rem;
+       
+    }
+
+    .abouts-title h2{
+        font-size: 1.8rem;
+        padding: 5px;
+    }
+    .abouts-title p{
+        font-size: 0.7rem;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    
+     /* ==============main div css media query============ */
+    .main{
+        display: block;
+        gap: 15px;
+    }
+    .main .p1
+    {
+        margin: 0px;
+        position: relative;
+        top: -5px;
+        left: -15px;
+
+    }
+    .main .p2{
+        margin: 0px;
+        position: relative;
+        top: -90px;
+    }
+    .main b{
+        font-size: 2rem;
+        color: gold;
+        margin: 10px;
+    }
+    .main .p2 {
+        margin-left:0px ;
+    }
+    .main strong{
+        font-size: 2rem;
+        color: gold;
+        margin: 10px;
+    }
+    .main span{
+        font-size: 0.8rem;
+        position: relative;
+        top: -10px;
+    }
+       .subdiv1 h6{
+      margin-top: -35px;
+      font-size: 0.9rem;
+      margin-left: -30px;
+    }
+
+    .subdiv2 h6{
+        margin-left: 15px;
+        margin-top: -120px;
+        font-size: 0.9rem;
+        }
+    
+    /* button css btn2 */
+    .btn5{
+        font-size: 0.6rem;
+        padding: 5px 15px;
+        position: relative;
+        top: -60px;
+    }
+    
+}
+
+/*================= services================================ */
+.h1services{
+    font-size: 2.5rem;
+    text-align: center;
+    position: relative;
+   bottom: 80px;
+   font-family: "Dancing Script", cursive;
+   color: orange;
+}
+.services{
+    padding-top: 170px;
+}
+.service{
+    display: flex;
+    position: relative;
+    gap: 20px;
+}
+.service .child{
+    background-color: #f1d2d2;
+    background-color: #f5f1f1;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    transition: 3s;
+    height: 360px;
+}
+.service .child:hover{
+    box-shadow: 0px 0px 5px gold,
+                0px 0px 10px gold,
+                0px 0px 15px gold,
+                0px 0px 20px gold;
+
+    background-color: rgba(255, 217, 0, 0.795);
+    transform: scale(0.9);
+}
+
+
+.service h5{
+font-size: 1.5rem;
+margin-bottom: 100px;
+margin-left: 24px;
+}
+.service p{
+    position: relative;
+    left: 10px;
+    right: 10px;
+    padding: 15px;
+    line-height: 1.9;
+}
+.service .fa-solid{
+    font-size: 2.5rem;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    color: gold;
+}
+.service .fa-solid:hover{
+    text-shadow: 5px 5px 25px red,
+                 0px 0px 50px red;
+}
+
+/* =====media query for service page================== */
+@media (max-width:767px) {
+    .h1services{
+        font-size: 1.9rem;
+        position: relative;
+       top: 0px;
+       left: -100px;
+       font-family: "Dancing Script", cursive;
+       color: orange;
+       margin-bottom: 70px;
+    }
+    
+    .services{
+        padding-top: 400px;
+    }
+    .service{
+        display: block;
+        gap: 30px;
+    }
+    .service .child{
+        margin: 30px;
+        height: 350px;
+    }
+    .service .child{
+        background-color: #f1d2d2;
+        background-color: #f5f1f1;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        transition: 3s;
+        height: 300px;
+        width: 400px;
+    }
+    .service .fa-solid{
+        font-size: 1.5rem;
+        margin-left: 20px;
+        margin-bottom: 20px;
+        color: gold;
+    }
+    .service p{
+        position: relative;
+        left: 10px;
+        right: 10px;
+        /* padding: 15px; */
+        padding-left: 25px;
+        padding-right: 25px;
+        line-height: 1.9;
+    }
+
+}
+
+/* =======food menu css part==================== */
+.foodmenu{
+    position: relative;
+    top: 40px;
+    margin-top: 50px;
+}
+.foodmenu .menu {
+    text-align: center;
+}
+.foodmenu .menu h4{
+    font-size: 1.6rem;
+    color: gold;
+    font-family: "Dancing Script", cursive;
+    /* font-optical-sizing: auto; */
+    font-weight: 550;
+    /* font-style: normal; */
+  
+}
+.foodmenu .menu h1{
+    font-size: 2.3rem;
+}
+.submenu .child span{
+    position: relative;
+}
+.submenu1 p{
+    font-size: 0.8rem;
+}
+
+.submenu .child{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+.submenu .child:hover{
+    text-shadow: 3px 3px 10px yellow;
+}
+.submenu .child span{
+    position: relative;
+    top: 10px;
+    left: -35px;
+    font-size: 1.1rem;
+}
+.submenu .child div .fa-solid{
+    color: gold;
+    font-size: 1.9rem;
+    margin-left: -10px;
+    /* padding-left: 20px; */
+    padding-right: 10px;
+}
+.foodmenu .fa-solid{
+    font-size: 2rem;
+}
+hr{
+    width: 480px;
+    position: relative;
+    left: 150px;
+    top: -110px;
+}
+.submenu1{
+    display: flex;
+    margin-top: 100px;
+    gap: 10px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+.sub-child1{
+    width: 100%;
+}
+.sub-child1 div{
+}
+.sub-child2{
+    width: 100%;
+}
+.sub-child2 .items{
+}
+.sub-child2 span{
+    color: gold;
+}
+
+
+.submenu1 img{
+    height: 100px;
+    width: 100px;
+    position: relative;
+    /* top: 20px; */
+    left: 35px;
+}
+.items h3, p, span{
+    position: relative;
+    left: 50px;
+    bottom: 100px;
+}
+.items h3{
+    position: relative;
+    left: 150px;
+}
+.items span{
+    position: relative;
+    top: -120px;
+    left: 580px;
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+.items h3{
+    font-size: 1.1rem;
+}
+.items p{
+    margin-left: 100px;  
+}
+.sub-child1 span{
+    color: goldenrod;
+}
+
+/* ==== MEDIA QUERY FOR FOOD MENU================================= */
+@media (max-width:767px) {
+    .foodmenu .menu h1{
+        font-size: 1.8rem;
+        position: relative;
+        left: -70px;
+        top: 0px;
+    }
+    .foodmenu .menu h4{
+        position: relative;
+        left: -70px;
+        top: 0px;
+    }
+    .submenu .child{
+        margin-left: -80px;
+        margin-top: 20px;
+    }
+    .submenu .child span{
+        font-size: 1rem;
+    }
+    .submenu1{
+        display: block;
+        width: 100%;
+        margin-top: 80px;
+    }
+    .foodmenu .menu div .fa-solid{
+        font-size: 1.3rem;
+    }
+    .submenu1 img{
+        height: 75px;
+        width: 75px;
+        margin-left: -30px;
+        position: relative;
+        top: -25px;
+    }
+    div .items{
+        margin-left: -50px;
+    }
+    
+    hr{
+        width: 250px;
+    }
+    .items h3{
+        font-size: 0.9rem;
+    }
+    .items span{
+        position: relative;
+        /* top: -120px; */
+        left: 350px;
+        font-size: 1rem;
+        font-weight: 400;
+    }
+    .items p{
+        margin-right: 50px;
+        font-size: 0.7rem;
+    }
+}
+
+
+/* =======book A table css part============= */
+
+.tables .table{
+    margin-top: 50px;
+    display: flex;
+}
+.booktable{
+    font-size: 2rem;
+    text-align: center;
+    color: orange;
+    margin-top: 40px;
+    font-family: "Dancing Script", cursive;
+}
+
+.table .image img{
+    width: 650px;
+    height: 450px;
+}
+.table .resform{
+    width: 650px;
+    background-color: rgba(0, 0, 0, 0.973);
+    height: 450px;
+}
+.table .resform h1{
+    color: white;
+    letter-spacing: 1.5px;
+    margin: 10px;
+    margin-bottom: 20px;
+}
+
+.table .resform h4{
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    color: orange;
+    font-size: 1.2rem;
+    margin-left: 10px;
+  
+}
+.table .resform form{
+    margin: 40px;
+}
+.table .resform form input{
+    height: 50px;
+    width: 280px;
+    padding-left: 15px;
+}
+.resform select{
+    height: 47px;
+    width: 280px;
+}
+.resform textarea{
+    margin-top: 10px;
+    width: 565px;
+    height: 70px;
+}
+.resform .btn6 {
+    margin-top: 10px;
+    background-color: goldenrod;
+    padding: 15px 243px;
+    border-style: none;
+}
+.resform .btn6:hover{
+    background-color: yellow;
+    box-shadow: 2px 2px 10px yellow;
+}
+
+fieldset{
+    border-style: none;
+}
+
+/* ====media query for Reserve table====== */
+@media (max-width:767px) {
+    .tables .table{
+        margin-top: 20px;
+        display: block;
+    }
+    .booktable{
+        font-size: 1.6rem;
+        position: relative;
+        left: -100px; 
+        top: -30px;
+    }
+    .table .resform{
+        width: 400px;
+        background-color: rgba(8, 8, 8, 0.973);
+        padding-bottom: 10px;
+        height: 350px;
+        margin-left: 25px;
+    }
+    .resform h4{
+        padding-top: 25px;
+    }
+    .table .resform form{
+        margin: 30px;
+    }
+    .table .image img{
+        display: none;
+    }
+    .table .resform form input{
+        height: 30px;
+        width: 150px;
+        padding-left: 15px;
+    }
+    .resform select{
+        height: 29px;
+        width: 150px;
+    }
+    .resform textarea{
+        margin-top: 10px;
+        width: 306px;
+        height: 40px;
+    }
+    .resform .btn6 {
+        margin-top: 10px;
+        background-color: goldenrod;
+        padding: 11px 115px;
+        border-style: none;
+        color: white;
+    }
+}
+
+/* ========TEAM MEMBERS SECTION CSS */
+.team-members{
+    margin-top: 150px;
+}
+.teams h4{
+    text-align: center;
+    font-family: "Dancing Script", cursive;
+    font-weight: 600;
+    color: orange;
+    font-size: 1.2rem;
+}
+.teams h1{
+    text-align: center;
+    margin-top: 10px;
+    font-size: 1.6rem;
+    font-family: "Comfortaa", sans-serif;
+    font-weight: 550;
+}
+.team-images{
+    display: flex;
+    margin-top: 60px;
+}
+.team-images .child{
+    margin: 20px;
+height: 300px;
+width: 400px;
+background-color: whitesmoke;
+}
+.team-images .child:hover{
+    background-color: goldenrod;
+    transform: scale(1.1,1.1);
+    border-radius: 10px;
+}
+.team-images .child h2{
+    text-align: center;
+    margin-top: 10px;
+    font-size: 1.3rem;
+}
+.team-images .child p{
+    position: relative;
+    left: 100px;
+    font-size: 0.8rem;
+}
+
+.team-images .child img {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    margin-left: 40px;
+    margin-top: 20px;
+    transition: 2s;
+}
+.team-images .child img:hover{
+    transform: scale(1.1,1.1);
+    box-shadow: 0px 0px 15px white;
+}
+
+/* ========     MEDIA QUERY FOR TEAM MEMBERS    =================== */
+@media (max-width:767px) {
+    .team-images{
+        display: block;
+    }
+    .team-images .child{
+    height: 260px;
+    width: 250px;
+    background-color: whitesmoke;
+    margin-left: 60px;
+    }
+    .team-images .child img {
+        height: 150px;
+        width: 150px;
+    }
+    .team-members{
+        margin-top: 100px;
+    }
+    .teams h4{
+        margin-left: -200px;
+        font-family: "Dancing Script", cursive;
+        font-weight: 600;
+        color: orange;
+        font-size: 1.2rem;
+    }
+    .teams h1{
+        margin-left: -200px;
+        margin-top: 10px;
+        font-size: 1.6rem;
+        font-family: "Comfortaa", sans-serif;
+        font-weight: 550;
+    }
+    .child p{
+        margin-left: -10px;
+        font-family: "Dancing Script", cursive;
+    }
+}
+
+/* ===  TESTIMONIALS CSS PART   ================= */
+.testimonials{
+    margin-top: 120px;
+    text-align: center;
+}
+.testi h4{
+    font-family: "Dancing Script", cursive;
+    font-weight: 600;
+    color: orange;
+    font-size: 1.2rem;
+}
+.testi h1{
+    margin-top: 20px;
+}
+.feedbacks{
+    display: flex;
+    margin-left: 60px;
+    margin-top: 100px;
+}
+.testi .feedbacks .child{
+background-color:whitesmoke;
+width:250px ;
+height: 250px;
+margin: 20px;
+}
+.testi .feedbacks .child:hover{
+    background-color: orange;
+    transform: scale(1.05,1.05);
+    color: white;
+}
+.testi .feedbacks .child .fa-solid{
+    font-size: 1.5rem;
+    position: relative;
+    left: -80px;
+    top: 30px;
+    color: orange;
+}
+.testi .feedbacks .child .fa-solid:hover{
+    background-color: white;
+    color: white;
+}
+
+.testi .feedbacks .child img{
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    margin-left: -150px;
+    margin-top: -30px;
+}
+.feedbacks .child p{
+    position: relative;
+    top: 50px;
+    left: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    line-height: 1.5;
+}
+.feedbacks .child div{
+    position: relative;
+    top: 90px;
+    text-align: center;
+}
+.feedbacks .child div h2{
+    position: relative;
+    left: 20px;
+}
+.feedbacks .child div h6{
+    position: relative;
+    top: -30px;
+}
+
+/* ============ MEDIA QUERY FOR TESTIMONIAL PART ============== */
+
+@media (max-width:767px) {
+    .feedbacks{
+        display: block;
+        margin-left: 40px;
+    }
+    .testi h4{
+        font-family: "Dancing Script", cursive;
+        font-weight: 600;
+        color: orange;
+        font-size: 1.2rem;
+        margin-left: -200px
+    }
+    .testi h1{
+        margin-left: -200px;
+        margin-top: 20px;
+    }
+    .feedbacks .child div h2{
+        position: relative;
+        left: 20px;
+        font-size: 1.2rem;
+        /* font-family: "Dancing Script", cursive; */
+    }
+    .feedbacks .child div h6{
+        position: relative;
+        top: -30px;
+        left: 15px;
+        font-family: "Dancing Script", cursive;
+    }
+    
+}
+
+/* ========    MORE DETAILS ABOUT CSS PAGE  =========== */
+.moredetails{
+    margin-top: 100px;
+    background-color: black;
+}
+.details{
+    display: flex;
+    margin: 40px;
+}
+.details .child{
+    margin: 30px;
+    margin-top: 100px;
+    color: white;
+    margin-left: 60px;
+    width: 200px;
+}
+.details .child:hover{
+    transform: scale(1.1,1.1);
+    box-shadow: 0px 0px 10px orange;
+}
+.details .child p{
+    position: relative;
+    top: 0px;
+    left: 0px;
+}
+.details .child input{
+    margin-top: 20px;
+    padding: 10px 0px;
+}
+.details .child h4{
+    font-family: "Dancing Script", cursive;
+    font-weight: 600;
+    color: orange;
+    font-size: 1.2rem;
+    margin-left: 20px;
+}
+.details .child a .fa-brands{
+    color: orange;
+    padding: 5px;
+    font-size: 1.2rem;
+}
+.details .child a .fa-brands:hover{
+    color: white;
+    transform: scale(1.1,1.1);
+    box-shadow: 0px 0px 5px white ;
+    background-color:orange;
+}
+.details .child .subchild{
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.details .child .subchild a{
+color: white;
+}
+.details .child .subchild .btn7{
+    color: white;
+    position: relative;
+    left: 95px;
+    top: -33px;
+    padding: 6px 10px;
+    background-color: orange;
+    border-style: none;
+}
+
+/* ======       MEDIA QUERY  FOR DETAILS PAGE ==== */
+
+@media (max-width:767px) {
+
+    .details{
+        display: block;
+        margin: 40px;
+        height: 1100px;
+    }
+    .details .child{
+        position: relative;
+        top: 60px;
+    }
+    .subchild{
+        margin-top: 140px;
+    }
+    .details .child h4{
+        margin-top: 50px;
+    }
+}
+
+/* === footer section ====== */
+.footer1 footer{
+    text-align: center;
+    background-color: black;
+    color: white;
+    padding-top: 10px;
+    position: relative;
+    top: -39px;
+    height: 50px;
+}
+.footer1 footer:hover{
+    text-shadow: 2px 2px 10px orange;
+    transform: scale(1.1,1.1);
+    color: red;
+}
+
